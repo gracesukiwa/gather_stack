@@ -13,7 +13,7 @@ function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-const statusConfig: Record<string, { label: string; color: string; icon: React.ComponentType<{ size?: number }> }> = {
+const statusConfig: Record<string, { label: string; color: string; icon: React.ComponentType<{ size?: string | number }> }> = {
   pending: { label: 'Pending', color: 'bg-yellow/30 text-yellow-800 border-yellow/50', icon: Clock },
   confirmed: { label: 'Confirmed', color: 'bg-teal/15 text-teal border-teal/30', icon: CheckCircle },
   shipped: { label: 'Shipped', color: 'bg-pink/15 text-pink border-pink/30', icon: Truck },
